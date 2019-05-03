@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:orientation="vertical">
+
+    <ImageView
+        android:src="@drawable/jogjaholiday"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_margin="10px"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/username"
+        android:textColor="@color/putih"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="20dp"/>
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_margin="10px"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/password"
+        android:textColor="@color/putih"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="20dp"/>
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_margin="10px"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/prompt_email"
+        android:textColor="@color/putih"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="20dp"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TableRow
+            android:gravity="center">
+            <Button
+                android:textColor="@color/putih"
+                android:background="@drawable/edit_text"
+                android:text="Sign Up"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
