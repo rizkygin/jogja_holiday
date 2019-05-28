@@ -13,29 +13,21 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />
     <EditText
-        android:id="@+id/etUsername"
-        android:layout_margin="10px"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:hint="@string/username"
-        android:textColor="@color/putih"
-        android:background="@drawable/edit_text"
-        android:paddingLeft="20dp"/>
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_margin="10px"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:hint="@string/password"
-        android:textColor="@color/putih"
-        android:background="@drawable/edit_text"
-        android:paddingLeft="20dp"/>
-    <EditText
         android:id="@+id/etEmail"
-        android:layout_margin="10px"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/prompt_email"
+        android:textColor="@color/putih"
+        android:background="@drawable/edit_text"
+        android:paddingLeft="20dp"/>
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/etPassword"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/password"
         android:textColor="@color/putih"
         android:background="@drawable/edit_text"
         android:paddingLeft="20dp"/>
@@ -45,9 +37,10 @@
         <TableRow
             android:gravity="center">
             <Button
+                android:id="@+id/btnSignUp"
                 android:textColor="@color/putih"
                 android:background="@drawable/edit_text"
-                android:text="Sign Up"/>
+                android:text="@string/sign_up"/>
         </TableRow>
     </TableLayout>
 </LinearLayout>
