@@ -4,9 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -22,6 +27,11 @@ public class PantaiFragment extends Fragment{
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    View v;
+    private RecyclerView myRecycleView;
+    private List<pantaiModel> listPantai;
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -54,17 +64,23 @@ public class PantaiFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        listPantai = new ArrayList<>();
+        listPantai.add(new pantaiModel("Pantai Parangritis","Jogjakarta",1,"enak",R.drawable.jogjaholiday));
+        listPantai.add(new pantaiModel("Pantai aku","Jogjakarta",5,"biasa",R.drawable.jogjaholiday));
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pantai, container, false);
+        v = inflater.inflate(R.layout.fragment_pantai,container,false);
+        myRecycleView = (RecyclerView) v.findViewById(R.id.recycle_view);
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),listPantai);
+        myRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        myRecycleView.setAdapter(recyclerViewAdapter);
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
