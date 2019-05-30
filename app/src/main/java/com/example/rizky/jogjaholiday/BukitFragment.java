@@ -4,9 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -27,20 +32,15 @@ public class BukitFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    View v;
+    private RecyclerView myRecycleView;
+    private List<bukitModel> listBukit;
+
     private OnFragmentInteractionListener mListener;
 
     public BukitFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BukitFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static BukitFragment newInstance(String param1, String param2) {
         BukitFragment fragment = new BukitFragment();
@@ -58,13 +58,23 @@ public class BukitFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        listBukit= new ArrayList<>();
+        listBukit.add(new bukitModel("Bukit Becici","sads","keren",1,R.drawable.becici));
+        listBukit.add(new bukitModel("Bukit Panguk Kediwung","sads","keren",1,R.drawable.pangukkediwung));
+        listBukit.add(new bukitModel("Bukit Setumbu","sads","keren",1,R.drawable.setumbu));
+        listBukit.add(new bukitModel("Bukit Tembelan","sads","keren",1,R.drawable.tembelan));
+        listBukit.add(new bukitModel("Bukit Ketep Pass","sads","keren",1,R.drawable.keteppass));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bukit, container, false);
+        v = inflater.inflate(R.layout.fragment_bukit,container,false);
+        myRecycleView = (RecyclerView) v.findViewById(R.id.recycle_view);
+        RecyclerViewAdapterbukit recyclerViewAdapter = new RecyclerViewAdapterbukit(getContext(),listBukit);
+        myRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        myRecycleView.setAdapter(recyclerViewAdapter);
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -87,17 +97,6 @@ public class BukitFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

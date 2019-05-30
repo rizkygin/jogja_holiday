@@ -42,15 +42,6 @@ public class PantaiFragment extends Fragment{
     public PantaiFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PantaiFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static PantaiFragment newInstance(String param1, String param2) {
         PantaiFragment fragment = new PantaiFragment();
@@ -67,7 +58,12 @@ public class PantaiFragment extends Fragment{
 
         listPantai = new ArrayList<>();
         listPantai.add(new pantaiModel("Pantai Parangritis","Jogjakarta",1,"enak",R.drawable.jogjaholiday));
-        listPantai.add(new pantaiModel("Pantai aku","Jogjakarta",5,"biasa",R.drawable.jogjaholiday));
+        listPantai.add(new pantaiModel("Pantai Depok","Jogjakarta",5,"biasa",R.drawable.pantaidepok));
+        listPantai.add(new pantaiModel("Pantai Drini","Jogjakarta",5,"biasa",R.drawable.pantaidrini));
+        listPantai.add(new pantaiModel("Pantai Glagah","Jogjakarta",5,"biasa",R.drawable.pantaiglagah));
+        listPantai.add(new pantaiModel("Pantai Indrayanti","Jogjakarta",5,"biasa",R.drawable.pantaiindrayanti));
+        listPantai.add(new pantaiModel("Pantai Jogan","Jogjakarta",5,"biasa",R.drawable.pantaijogan));
+        listPantai.add(new pantaiModel("Pantai Krakal","Jogjakarta",5,"biasa",R.drawable.pantaikrakal));
 
     }
 
