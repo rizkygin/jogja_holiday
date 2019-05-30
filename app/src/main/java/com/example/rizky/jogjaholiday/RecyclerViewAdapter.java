@@ -39,13 +39,14 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
             public void onClick(View v) {
 
 //                String kirim  = String.valueOf(v.findViewById(R.id.alamat)[pos]);
-                int pos  = vHolder.getAdapterPosition();
+
+                int posP  = vHolder.getAdapterPosition() + 1 ;
 //                Intent intent = new Intent(viewGroup.getContext(),PantaiFragment.class);
 //                intent.putExtra("Position",pos);
 //                (intent);
 
                 Bundle bundle = new Bundle();
-                bundle.putInt("position",pos);
+                bundle.putString("positionPantai",String.valueOf(posP));
 
                 Intent newIntent = new Intent(mContext, spesific.class);
                 newIntent.putExtras(bundle);
@@ -64,6 +65,7 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         myViewHolder.tv_name.setText(mData.get(i).getNama());
         myViewHolder.tv_location.setText(mData.get(i).getAlamat());
         myViewHolder.img.setImageResource(mData.get(i).getGambar());
+        myViewHolder.bintang.setText(String.valueOf(mData.get(i).getBintang()));
 
     }
 
@@ -78,9 +80,10 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         private TextView tv_name;
         private TextView tv_location;
         private ImageView img;
+        private TextView bintang;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            bintang = (TextView) itemView.findViewById(R.id.bintang);
             spesific_wisata = (LinearLayout) itemView.findViewById(R.id.wisata);
             tv_name =(TextView) itemView.findViewById(R.id.name);
             tv_location=(TextView) itemView.findViewById(R.id.location);

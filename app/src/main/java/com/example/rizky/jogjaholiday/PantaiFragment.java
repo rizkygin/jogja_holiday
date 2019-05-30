@@ -11,9 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +42,45 @@ public class PantaiFragment extends Fragment{
     String [] Deskripsi = new String[7];
     int[] gambar = new int[7];
 
+    public void setNama(String nama,int i) {
+        this.nama[i] = nama;
+    }
+
+    public void setAlamat(String[] alamat) {
+        this.alamat = alamat;
+    }
+
+    public void setBintang(int[] bintang) {
+        this.bintang = bintang;
+    }
+
+    public void setDeskripsi(String[] deskripsi) {
+        Deskripsi = deskripsi;
+    }
+
+    public void setGambar(int[] gambar) {
+        this.gambar = gambar;
+    }
+
+    public String getNama(int i) {
+        return nama[i];
+    }
+
+    public String getAlamat(int i) {
+        return alamat[i];
+    }
+
+    public int getBintang(int i) {
+        return bintang[i];
+    }
+
+    public String getDeskripsi(int i) {
+        return Deskripsi[i];
+    }
+
+    public int getGambar(int i) {
+        return gambar[i];
+    }
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -70,41 +107,14 @@ public class PantaiFragment extends Fragment{
 
 
         listPantai = new ArrayList<>();
-        listPantai.add(new pantaiModel("Pantai Parangritis","Jogjakarta",1,"enak",R.drawable.jogjaholiday));
-        nama[0]= "Pantai Parangritis";
-        alamat[0] = "Jogjakarta";
-        bintang[0] = 1;
-        gambar[0]=R.drawable.jogjaholiday;
-        listPantai.add(new pantaiModel("Pantai Depok","Jogjakarta",5,"biasa",R.drawable.pantaidepok));
-        nama[1]= "Pantai Depok";
-        alamat[1] = "Jogjakarta";
-        bintang[1] = 5;
-        gambar[1]=R.drawable.pantaidepok;
-        listPantai.add(new pantaiModel("Pantai Drini","Jogjakarta",5,"biasa",R.drawable.pantaidrini));
-        nama[2]= "Pantai Drini";
-        alamat[2] = "Jogjakarta";
-        bintang[2] = 5;
-        gambar[2]=R.drawable.pantaidrini;
-        listPantai.add(new pantaiModel("Pantai Glagah","Jogjakarta",5,"biasa",R.drawable.pantaiglagah));
-        nama[3]= "Pantai Glagah";
-        alamat[3] = "Jogjakarta";
-        bintang[3] = 5;
-        gambar[3]=R.drawable.pantaiglagah;
-        listPantai.add(new pantaiModel("Pantai Indrayanti","Jogjakarta",5,"biasa",R.drawable.pantaiindrayanti));
-        nama[4]= "Pantai Indrayanti";
-        alamat[4] = "Jogjakarta";
-        bintang[4] = 5;
-        gambar[4]=R.drawable.pantaiindrayanti;
-        listPantai.add(new pantaiModel("Pantai Jogan","Jogjakarta",5,"biasa",R.drawable.pantaijogan));
-        nama[5]= "Pantai Jogan";
-        alamat[5] = "Jogjakarta";
-        bintang[5] = 5;
-        gambar[5]=R.drawable.pantaijogan;
-        listPantai.add(new pantaiModel("Pantai Krakal","Jogjakarta",5,"biasa",R.drawable.pantaikrakal));
-        nama[6]= "Pantai Krakal";
-        alamat[6] = "Jogjakarta";
-        bintang[6] = 5;
-        gambar[6]=R.drawable.pantaikrakal;
+
+        listPantai.add(new pantaiModel("Pantai Depok","Parangtritis, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta",5,"biasa",R.drawable.pantaidepok));
+        listPantai.add(new pantaiModel("Pantai Parangritis","Jl. Pantai Parangkusumo, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta 55772",1,"enak",R.drawable.jogjaholiday));
+        listPantai.add(new pantaiModel("Pantai Drini","Banjarejo, Tanjungsari, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5,"biasa",R.drawable.pantaidrini));
+        listPantai.add(new pantaiModel("Pantai Glagah","Glagah, Temon, Kulon Progo Regency, Special Region of Yogyakarta 55654",5,"biasa",R.drawable.pantaiglagah));
+        listPantai.add(new pantaiModel("Pantai Indrayanti","Pantai, Tepus, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5,"biasa",R.drawable.pantaiindrayanti));
+        listPantai.add(new pantaiModel("Pantai Jogan","Jalan Pantai Siung, Purwodadi, Tepus, Pantai, Purwodadi, Tepus, Kabupaten Gunung Kidul",5,"biasa",R.drawable.pantaijogan));
+        listPantai.add(new pantaiModel("Pantai Krakal","Ngestirejo, Tanjungsari, Gunung Kidul Regency, Special Region of Yogyakarta 55000",5,"biasa",R.drawable.pantaikrakal));
 
 
 
@@ -120,8 +130,6 @@ public class PantaiFragment extends Fragment{
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),listPantai);
         myRecycleView.setLayoutManager(new LinearLayoutManager(getActivity()));
         myRecycleView.setAdapter(recyclerViewAdapter);
-
-
 
         return v;
     }
@@ -141,12 +149,12 @@ public class PantaiFragment extends Fragment{
         }
 //        Intent intent = getActivity().getIntent();
 //        pos = intent.getExtras().getInt("Position");
-        Bundle bundleterima = getActivity().getIntent().getExtras();
-        if (bundleterima != null)
-        {
-            final int pose = bundleterima.getInt("Position");
-            pos = pose;
-        }
+//        Bundle bundleterima = getActivity().getIntent().getExtras();
+//        if (bundleterima != null)
+//        {
+//            final int pose = bundleterima.getInt("position");
+//            pos = pose;
+//        }
 
     }
 
@@ -154,13 +162,13 @@ public class PantaiFragment extends Fragment{
     public void onDetach() {
         super.onDetach();
         mListener = null;
-
-        Bundle bundle = new Bundle();
-        bundle.putString("nama",nama[pos]);
-
-        Intent kirim = new Intent(getActivity(),spesific.class);
-        kirim.putExtras(bundle);
-        startActivityForResult(kirim, 0);
+//
+//        Bundle bundle = new Bundle();
+//        bundle.putString("nama",nama[pos]);
+//
+//        Intent kirim = new Intent(getActivity(),spesific.class);
+//        kirim.putExtras(bundle);
+//        startActivityForResult(kirim, 0);
     }
 
     /**

@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "615499344667",
-    "firebase_url": "https://authapp-82958.firebaseio.com",
-    "project_id": "authapp-82958",
-    "storage_bucket": "authapp-82958.appspot.com"
+    "project_number": "167229766705",
+    "firebase_url": "https://jogjaholiday-635f3.firebaseio.com",
+    "project_id": "jogjaholiday-635f3",
+    "storage_bucket": "jogjaholiday-635f3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:615499344667:android:70c99b388a2f58f1",
+        "mobilesdk_app_id": "1:167229766705:android:70c99b388a2f58f1",
         "android_client_info": {
           "package_name": "com.example.rizky.jogjaholiday"
         }
       },
       "oauth_client": [
         {
-          "client_id": "615499344667-885t6lfsnvacfk3rqnagrb0t2t5dg4ue.apps.googleusercontent.com",
+          "client_id": "167229766705-6ol65hpn0f79eg3o1dstqfrg8di4f8df.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.rizky.jogjaholiday",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "615499344667-4v6nk2ihqs2begh6hqhp88bjiocsst68.apps.googleusercontent.com",
+          "client_id": "167229766705-h48t4qvq45g4gshi1qbcrf64m8ig9o1g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDart5WKpONrmb_qrzLR3_tWiYeVz2lrqY"
+          "current_key": "AIzaSyAY5nOrVLSoZ6Iv3AWqY4CnQD0ZuYqEC24"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "615499344667-4v6nk2ihqs2begh6hqhp88bjiocsst68.apps.googleusercontent.com",
+              "client_id": "167229766705-h48t4qvq45g4gshi1qbcrf64m8ig9o1g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

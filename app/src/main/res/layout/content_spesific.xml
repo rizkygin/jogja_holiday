@@ -35,6 +35,7 @@
         app:layout_constraintVertical_bias="0.018" />
 
     <LinearLayout
+        android:padding="20dp"
         android:id="@+id/linearlayout"
         android:layout_width="382dp"
         android:layout_height="302dp"
@@ -78,8 +79,10 @@
 
         <TextView
             android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="104dp"
+            android:layout_height="27dp"
+            android:height="10dp"
+            android:background="@drawable/bag"
             android:text="Username"
             android:textSize="18sp" />
 
@@ -90,6 +93,16 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Comment" />
+        <Button
+            android:id="@+id/btnsubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/bag"
+            android:textColor="#000"
+            android:text="PUBLISH" />
+
 
     </LinearLayout>
 

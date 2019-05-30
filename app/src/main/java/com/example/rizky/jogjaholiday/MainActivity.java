@@ -5,6 +5,7 @@ import android.app.SearchableInfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v4.view.GravityCompat;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity
     private DatabaseReference myRef;
     private String userID;
 
+    int pos;
     private ListView mListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

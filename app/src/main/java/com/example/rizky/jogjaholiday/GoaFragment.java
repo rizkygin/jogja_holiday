@@ -51,13 +51,13 @@ public class GoaFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         listgoa= new ArrayList<>();
-        listgoa.add(new goaModel("Goa Pindul","sads","keren",1,R.drawable.goapindul));
-        listgoa.add(new goaModel("Goa Cerme","sads","keren",1,R.drawable.goacerme));
-        listgoa.add(new goaModel("Goa Jomblang","sads","keren",1,R.drawable.goajomblang));
-        listgoa.add(new goaModel("Goa Kali Suci","sads","keren",1,R.drawable.goakalisuci));
-        listgoa.add(new goaModel("Goa Rancang Kencono","sads","keren",1,R.drawable.goarancangkencono));
-        listgoa.add(new goaModel("Goa Selarong","sads","keren",1,R.drawable.goaselarong));
-        listgoa.add(new goaModel("Goa Seplawan","sads","keren",1,R.drawable.goaseplawan));
+        listgoa.add(new goaModel("Goa Pindul","Jalan Raya Pindul Banyubening II, RT.06/RW.11, Gelaran II, Bejiharjo, Karangmojo, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55891","keren",1,R.drawable.goapindul));
+        listgoa.add(new goaModel("Goa Cerme","Jl. Srunggo, Selopamioro, Imogiri, Srunggo 2, Selopamioro, Imogiri, Bantul, Daerah Istimewa Yogyakarta 55782","keren",1,R.drawable.goacerme));
+        listgoa.add(new goaModel("Goa Jomblang","Jetis Wetan, Pacarejo, Semanu, Gunung Kidul Regency, Special Region of Yogyakarta 55893","keren",1,R.drawable.goajomblang));
+        listgoa.add(new goaModel("Goa Kali Suci","Jetis, Jonge, Pacarejo, Kec. Semanu, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55893","keren",1,R.drawable.goakalisuci));
+        listgoa.add(new goaModel("Goa Rancang Kencono","Mungguran II, Bleberan, Playen, Gunung Kidul Regency, Special Region of Yogyakarta 558611","keren",1,R.drawable.goarancangkencono));
+        listgoa.add(new goaModel("Goa Selarong","Waktu Gedug, Guwosari, Pajangan, Bantul Regency, Special Region of Yogyakarta 55751","keren",1,R.drawable.goaselarong));
+        listgoa.add(new goaModel("Goa Seplawan","Katerban, Donorejo, Kaligesing, Purworejo Regency, Central Java 54175","keren",1,R.drawable.goaseplawan));
     }
 
     @Override
