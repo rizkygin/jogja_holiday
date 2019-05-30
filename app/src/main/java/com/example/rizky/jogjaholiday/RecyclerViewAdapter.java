@@ -1,14 +1,19 @@
 package com.example.rizky.jogjaholiday;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.lang.reflect.Field;
 import java.util.List;
 
 public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
@@ -21,12 +26,34 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         this.mData = mData;
     }
 
+
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public MyViewHolder onCreateViewHolder(@NonNull final ViewGroup viewGroup, int i) {
         View v;
         v = LayoutInflater.from(mContext).inflate(R.layout.view_layout_item,viewGroup,false);
-        MyViewHolder vHolder = new MyViewHolder(v);
+        final MyViewHolder vHolder = new MyViewHolder(v);
+
+        vHolder.spesific_wisata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                String kirim  = String.valueOf(v.findViewById(R.id.alamat)[pos]);
+                int pos  = vHolder.getAdapterPosition();
+//                Intent intent = new Intent(viewGroup.getContext(),PantaiFragment.class);
+//                intent.putExtra("Position",pos);
+//                (intent);
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("position",pos);
+
+                Intent newIntent = new Intent(mContext, spesific.class);
+                newIntent.putExtras(bundle);
+                mContext.startActivity(newIntent);
+
+
+            }
+        });
 
 
         return vHolder;
@@ -37,6 +64,7 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         myViewHolder.tv_name.setText(mData.get(i).getNama());
         myViewHolder.tv_location.setText(mData.get(i).getAlamat());
         myViewHolder.img.setImageResource(mData.get(i).getGambar());
+
     }
 
 
@@ -46,15 +74,24 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
+        private LinearLayout spesific_wisata;
         private TextView tv_name;
         private TextView tv_location;
         private ImageView img;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            spesific_wisata = (LinearLayout) itemView.findViewById(R.id.wisata);
             tv_name =(TextView) itemView.findViewById(R.id.name);
             tv_location=(TextView) itemView.findViewById(R.id.location);
             img = (ImageView) itemView.findViewById(R.id.image);
         }
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+
+
+        return super.getItemViewType(position);
     }
 }
