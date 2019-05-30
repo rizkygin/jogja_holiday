@@ -1,6 +1,7 @@
 package com.example.rizky.jogjaholiday;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,9 +28,14 @@ public class spesific extends AppCompatActivity {
 
     String darialamat,darnama;
     TextView mNama;
+    TextView username;
+    Button check;
     TextView address,rating;
     DatabaseReference reff;
     String posP,posG,posB;
+    String lat;
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +46,25 @@ public class spesific extends AppCompatActivity {
         address = findViewById(R.id.alamat);
         rating = findViewById(R.id.tvRating);
         mNama = findViewById(R.id.nama);
+        username = findViewById(R.id.username);
+        check = findViewById(R.id.btncuaca);
+
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),cuaca.class);
+                startActivity(i);
+            }
+        });
+
+        if(user.getEmail()!=null){
+
+            username.setText(user.getEmail());
+        }else {
+            Toast.makeText(this,"Sure to Login First",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
+        }
 
         Intent intent = getIntent();
 
@@ -62,8 +89,12 @@ public class spesific extends AppCompatActivity {
                         }
                         String nama = dataSnapshot.child("nama").getValue().toString();
                         String al = dataSnapshot.child("al").getValue().toString();
-                        String des = dataSnapshot.child("des").getValue().toString();
+                        String latlo = dataSnapshot.child("lat").getValue().toString();
+                        String drating = dataSnapshot.child("rating").getValue().toString();
 
+                        lat = latlo;
+
+                        rating.setText(drating);
                         address.setText(al);
                         mNama.setText(nama);
                         posP = null;
@@ -82,16 +113,20 @@ public class spesific extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+                if(lat != null) {
+                    Uri gmmIntentUri = Uri.parse("https://www.google.com/maps/search/?api=1" + "&query=" + lat);
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                    }
+                }
         });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this,"value " + String.valueOf(posG),Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"value " + String.valueOf(user.getEmail()),Toast.LENGTH_SHORT).show();
     }
 }
 

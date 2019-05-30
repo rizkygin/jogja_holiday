@@ -59,11 +59,11 @@ public class BukitFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         listBukit= new ArrayList<>();
-        listBukit.add(new bukitModel("Bukit Becici","Gunungcilik, RT.07/RW.02, Gn. Cilik, Muntuk, Dlingo, Bantul, Daerah Istimewa Yogyakarta 55783","keren",4,R.drawable.becici));
-        listBukit.add(new bukitModel("Bukit Panguk Kediwung","Kediwung, Mangunan, Dlingo, Bantul Regency, Special Region of Yogyakarta 55783","keren",5,R.drawable.pangukkediwung));
-        listBukit.add(new bukitModel("Bukit Setumbu","Jl.Borobudur Ngadiharjo KM 4 km, Kurahan, Karangrejo, Kec. Borobudur, Magelang, Jawa Tengah 56553","keren",2,R.drawable.setumbu));
-        listBukit.add(new bukitModel("Bukit Tembelan","Mangunan, Dlingo, Bantul Regency, Special Region of Yogyakarta 55783","keren",3,R.drawable.tembelan));
-        listBukit.add(new bukitModel("Bukit Ketep Pass","Jl. Blabak - Boyolali No.KM. 16, Ketep Pas, Ketep, Sawangan, Magelang, Jawa Tengah 56481","keren",2,R.drawable.keteppass));
+        listBukit.add(new bukitModel("Bukit Becici","Gunungcilik, RT.07/RW.02, Gn. Cilik, Muntuk, Dlingo, Bantul, Daerah Istimewa Yogyakarta 55783","keren",5.0,R.drawable.becici));
+        listBukit.add(new bukitModel("Bukit Panguk Kediwung","Kediwung, Mangunan, Dlingo, Bantul Regency, Special Region of Yogyakarta 55783","keren",5.0,R.drawable.pangukkediwung));
+        listBukit.add(new bukitModel("Bukit Setumbu","Jl.Borobudur Ngadiharjo KM 4 km, Kurahan, Karangrejo, Kec. Borobudur, Magelang, Jawa Tengah 56553","keren",5.0,R.drawable.setumbu));
+        listBukit.add(new bukitModel("Bukit Tembelan","Mangunan, Dlingo, Bantul Regency, Special Region of Yogyakarta 55783","keren",3.0,R.drawable.tembelan));
+        listBukit.add(new bukitModel("Bukit Ketep Pass","Jl. Blabak - Boyolali No.KM. 16, Ketep Pas, Ketep, Sawangan, Magelang, Jawa Tengah 56481","keren",2.0,R.drawable.keteppass));
     }
 
     @Override

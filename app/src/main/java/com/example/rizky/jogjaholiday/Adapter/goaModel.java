@@ -3,13 +3,13 @@ package com.example.rizky.jogjaholiday.Adapter;
 public class goaModel {
 
     private String nama,alamat,deskripsi;
-    int bintang;
+    double bintang;
     int gambar;
     public goaModel(){
 
     }
 
-    public goaModel(String nama, String alamat, String deskripsi, int bintang, int gambar) {
+    public goaModel(String nama, String alamat, String deskripsi, double bintang, int gambar) {
         this.nama = nama;
         this.alamat = alamat;
         this.deskripsi = deskripsi;
@@ -41,7 +41,7 @@ public class goaModel {
         this.deskripsi = deskripsi;
     }
 
-    public int getBintang() {
+    public double getBintang() {
         return bintang;
     }
 

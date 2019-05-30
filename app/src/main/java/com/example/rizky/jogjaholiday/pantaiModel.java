@@ -2,13 +2,13 @@ package com.example.rizky.jogjaholiday;
 
 public class pantaiModel {
     private String nama,alamat,deskripsi;
-    int bintang;
+    double bintang;
     int gambar;
 
     public  pantaiModel(){
 
      }
-    public pantaiModel(String nama, String alamat, int bintang, String deskripsi, int gambar) {
+    public pantaiModel(String nama, String alamat, double bintang, String deskripsi, int gambar) {
         this.nama = nama;
         this.alamat = alamat;
         this.bintang = bintang;
@@ -32,7 +32,7 @@ public class pantaiModel {
         this.alamat = alamat;
     }
 
-    public int getBintang() {
+    public double getBintang() {
         return bintang;
     }
 

@@ -108,13 +108,13 @@ public class PantaiFragment extends Fragment{
 
         listPantai = new ArrayList<>();
 
-        listPantai.add(new pantaiModel("Pantai Depok","Parangtritis, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta",5,"biasa",R.drawable.pantaidepok));
-        listPantai.add(new pantaiModel("Pantai Parangritis","Jl. Pantai Parangkusumo, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta 55772",1,"enak",R.drawable.jogjaholiday));
-        listPantai.add(new pantaiModel("Pantai Drini","Banjarejo, Tanjungsari, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5,"biasa",R.drawable.pantaidrini));
-        listPantai.add(new pantaiModel("Pantai Glagah","Glagah, Temon, Kulon Progo Regency, Special Region of Yogyakarta 55654",5,"biasa",R.drawable.pantaiglagah));
-        listPantai.add(new pantaiModel("Pantai Indrayanti","Pantai, Tepus, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5,"biasa",R.drawable.pantaiindrayanti));
-        listPantai.add(new pantaiModel("Pantai Jogan","Jalan Pantai Siung, Purwodadi, Tepus, Pantai, Purwodadi, Tepus, Kabupaten Gunung Kidul",5,"biasa",R.drawable.pantaijogan));
-        listPantai.add(new pantaiModel("Pantai Krakal","Ngestirejo, Tanjungsari, Gunung Kidul Regency, Special Region of Yogyakarta 55000",5,"biasa",R.drawable.pantaikrakal));
+        listPantai.add(new pantaiModel("Pantai Depok","Parangtritis, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta",5.0,"biasa",R.drawable.pantaidepok));
+        listPantai.add(new pantaiModel("Pantai Parangritis","Jl. Pantai Parangkusumo, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta 55772", 3.5,"enak",R.drawable.jogjaholiday));
+        listPantai.add(new pantaiModel("Pantai Drini","Banjarejo, Tanjungsari, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5.0,"biasa",R.drawable.pantaidrini));
+        listPantai.add(new pantaiModel("Pantai Glagah","Glagah, Temon, Kulon Progo Regency, Special Region of Yogyakarta 55654",5.0,"biasa",R.drawable.pantaiglagah));
+        listPantai.add(new pantaiModel("Pantai Indrayanti","Pantai, Tepus, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5.0,"biasa",R.drawable.pantaiindrayanti));
+        listPantai.add(new pantaiModel("Pantai Jogan","Jalan Pantai Siung, Purwodadi, Tepus, Pantai, Purwodadi, Tepus, Kabupaten Gunung Kidul",4.2,"biasa",R.drawable.pantaijogan));
+        listPantai.add(new pantaiModel("Pantai Krakal","Ngestirejo, Tanjungsari, Gunung Kidul Regency, Special Region of Yogyakarta 55000",5.0,"biasa",R.drawable.pantaikrakal));
 
 
 

@@ -23,16 +23,50 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="Wisata di Jogja"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#000"
         android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.018" />
+
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="cursive"
+        android:text="Rating"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvRating"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nama" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/start"
+        android:paddingLeft="10dp"
+        android:text="5.0"
+        app:layout_constraintBottom_toTopOf="@+id/linearlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:padding="20dp"
@@ -62,26 +96,15 @@
             android:textColor="#000"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/tv5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Rating Tempat"
-            android:textColor="#000"
-            android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/tvRating"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="50dp"
-            android:text="5.0" />
+
 
         <TextView
             android:id="@+id/username"
-            android:layout_width="104dp"
+            android:layout_width="wrap_content"
             android:layout_height="27dp"
             android:height="10dp"
+            android:paddingLeft="10dp"
             android:background="@drawable/bag"
             android:text="Username"
             android:textSize="18sp" />
@@ -93,15 +116,16 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Comment" />
+
         <Button
-            android:id="@+id/btnsubmit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/btncuaca"
+            android:layout_width="159dp"
+            android:layout_height="43dp"
+            android:background="@drawable/bag"
             android:ems="10"
             android:inputType="textPersonName"
-            android:background="@drawable/bag"
-            android:textColor="#000"
-            android:text="PUBLISH" />
+            android:text="Check Weather"
+            android:textColor="#000" />
 
 
     </LinearLayout>
