@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("Firebase Recyler Pagnation");
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -102,24 +101,24 @@ public class MainActivity extends AppCompatActivity
 
         getMenuInflater().inflate(R.menu.main, menu);
 //
-        SearchView searchView = (SearchView) menu.findItem(R.id.searchView).getActionView();
-        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
-        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
-        searchView.setSearchableInfo(searchableInfo);
-        searchView.setSubmitButtonEnabled(true);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                Toast.makeText(getApplicationContext(),query,Toast.LENGTH_LONG).show();
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                Toast.makeText(getApplicationContext(),newText,Toast.LENGTH_LONG).show();
-                return false;
-            }
-        });
+//        SearchView searchView = (SearchView) menu.findItem(R.id.searchView).getActionView();
+//        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+//        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
+//        searchView.setSearchableInfo(searchableInfo);
+//        searchView.setSubmitButtonEnabled(true);
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                Toast.makeText(getApplicationContext(),query,Toast.LENGTH_LONG).show();
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                Toast.makeText(getApplicationContext(),newText,Toast.LENGTH_LONG).show();
+//                return false;
+//            }
+//        });
 
         return true;
     }

@@ -8,9 +8,14 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,7 +114,7 @@ public class PantaiFragment extends Fragment{
         listPantai = new ArrayList<>();
 
         listPantai.add(new pantaiModel("Pantai Depok","Parangtritis, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta",5.0,"biasa",R.drawable.pantaidepok));
-        listPantai.add(new pantaiModel("Pantai Parangritis","Jl. Pantai Parangkusumo, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta 55772", 3.5,"enak",R.drawable.jogjaholiday));
+        listPantai.add(new pantaiModel("Pantai Parangritis","Jl. Pantai Parangkusumo, Pantai, Parangtritis, Kec. Kretek, Bantul, Daerah Istimewa Yogyakarta 55772", 3.5,"enak",R.drawable.parangritis));
         listPantai.add(new pantaiModel("Pantai Drini","Banjarejo, Tanjungsari, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5.0,"biasa",R.drawable.pantaidrini));
         listPantai.add(new pantaiModel("Pantai Glagah","Glagah, Temon, Kulon Progo Regency, Special Region of Yogyakarta 55654",5.0,"biasa",R.drawable.pantaiglagah));
         listPantai.add(new pantaiModel("Pantai Indrayanti","Pantai, Tepus, Gunung Kidul Regency, Special Region of Yogyakarta 55881",5.0,"biasa",R.drawable.pantaiindrayanti));
@@ -185,4 +190,5 @@ public class PantaiFragment extends Fragment{
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
