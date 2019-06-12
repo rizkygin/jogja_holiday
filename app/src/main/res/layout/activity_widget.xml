@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yogyakarta"
+        android:text="@string/yogyakarta"
         android:textColor="@color/text"
         android:textSize="25dp"
         android:paddingLeft="35dp"
@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hari Ini"
+        android:text="@string/hari_ini"
         android:textColor="@color/text"
         android:paddingTop="35dp"
         android:paddingLeft="77dp"/>
@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rainy"
+        android:text="@string/rainy"
         android:textColor="@color/text"
         android:paddingTop="140dp"
         android:paddingLeft="80dp"/>
@@ -50,7 +50,7 @@
         android:layout_marginLeft="50dp"
         android:textColor="@color/text"
         android:layout_marginTop="160dp"
-        android:text="detail"
+        android:text="@string/detail"
         android:id="@+id/btn"
         android:background="#05BFFA"/>
 

@@ -2,14 +2,20 @@ package com.example.rizky.jogjaholiday;
 
 import android.app.SearchManager;
 import android.app.SearchableInfo;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.IntentCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -21,15 +27,20 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.bumptech.glide.load.engine.Resource;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.jakewharton.processphoenix.ProcessPhoenix;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private TabAdapter adapter;
     RecyclerView recyclerView;
+
 
 
     private TabLayout tabLayout;
@@ -59,9 +70,12 @@ public class MainActivity extends AppCompatActivity
 
 
         adapter = new TabAdapter(getSupportFragmentManager());
-        adapter.addFragment(new PantaiFragment(), "Pantai");
-        adapter.addFragment(new BukitFragment(), "Bukit");
-        adapter.addFragment(new GoaFragment(), "Goa");
+        String pantai  = getString(R.string.pantai);
+        String bukit  = getString(R.string.bukit);
+        String Goa  = getString(R.string.goa);
+        adapter.addFragment(new PantaiFragment(), pantai);
+        adapter.addFragment(new BukitFragment(), bukit);
+        adapter.addFragment(new GoaFragment(), Goa);
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -132,13 +146,31 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.Indonesia) {
+            setAplocal("in");
+            Intent refresh = new Intent(this,splashScreen.class);
+            startActivity(refresh);
             return true;
         }
         else if( id == R.id.English){
+            setAplocal("en");
+            Intent refresh = new Intent(this,splashScreen.class);
+            startActivity(refresh);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setAplocal(String localCode) {
+        Resources res = getResources();
+        DisplayMetrics  dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.setLocale(new Locale( localCode.toLowerCase()));
+
+        res.updateConfiguration(conf,dm);
+//
+//        Intent nextIntent = new Intent(this,splashScreen.class);
+//                ProcessPhoenix.triggerRebirth(this, nextIntent);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

@@ -52,9 +52,12 @@
     <string name="are_you_sure">Are You Sure ?</string>
     <string name="your_comment">Your Comment</string>
     <string name="jogja_holiday">Jogja Holiday</string>
-    <string name="pantai">pantai</string>
-    <string name="bukit">hill</string>
+
+
+    <string name="pantai">Beach</string>
+    <string name="bukit">Hill</string>
     <string name="goa">cave</string>
+
     <string name="cek">Check Weather</string>
     <string name="coment">Add Comment</string>
     <string name="location">Show Location</string>

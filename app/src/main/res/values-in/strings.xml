@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Jogja Holiday</string>
+    <string name="title_activity_login">Masuk</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Surel</string>
+    <string name="password">Password</string>
+    <string name="action_sign_in">Mendaftar</string>
+    <string name="register"><u>Belum punya akun ? Daftarlah</u>
+    </string>
+    <string name="login">Masuk</string>
+    <string name="username">Username mu</string>
+    <string name="error_invalid_email">Surel tidak valid</string>
+    <string name="error_invalid_password">Password terlalu pendek</string>
+    <string name="error_incorrect_password">Password salah</string>
+    <string name="error_field_required">Colom ini harus diisi</string>
+    <string name="minimun">Password minimal 6 karakter</string>
+    <string name="EmailReq">Harus Memasukkan Surel</string>
+    <string name="PassReq">Harus Memasukkan Password</string>
+    <string name="fail">Tolong cek kembali surel dan password anda</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="Email">Surel</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Oops</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigasi</string>
+    <string name="action_settings">Pengaturan</string>
+
+    <string name="menu_home">Beranda</string>
+    <string name="menu_gallery">Galeri</string>
+    <string name="menu_slideshow">Tampil Slide</string>
+    <string name="menu_tools">Alat alat</string>
+    <string name="menu_share">Bagikan</string>
+    <string name="menu_send">Kirim</string>
+    <string name="help">Tolong</string>
+    <string name="logout">Keluar akun</string>
+    <string name="sign_up">Daftar</string>
+    <string name="english">English</string>
+    <string name="Indonesia">Indonesia</string>
+    <string name="keyword">keyword</string>
+    <string name="title_activity_spesific">spesifikasi</string>
+    <string name="detail">Detail</string>
+    <string name="rainy">Hujan</string>
+    <string name="hari_ini">Hari Ini</string>
+    <string name="yogyakarta">Yogyakarta</string>
+    <string name="are_you_sure">Apa Kamu Yakin</string>
+    <string name="your_comment">Komentar mu</string>
+    <string name="jogja_holiday">Jogja Holiday</string>
+
+
+    <string name="pantai">Pantai</string>
+    <string name="bukit">Bukit</string>
+    <string name="goa">Goa</string>
+
+    <string name="cek">Liat Cuaca</string>
+    <string name="coment">Tambah Koment</string>
+    <string name="location">Tampilkan Lokasi</string>
+</resources>

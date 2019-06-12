@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_navigation_black_24dp"
-            fab:fab_label="Show Location"
+            fab:fab_label="@string/location"
             fab:fab_size="mini"
             app:fab_colorRipple="@color/colorPrimary"/>
         <com.github.clans.fab.FloatingActionButton
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_comment_black_24dp"
-            fab:fab_label="Add Comment"
+            fab:fab_label="@string/coment"
             fab:fab_size="mini"
             app:fab_colorRipple="@color/colorPrimary"/>
 
@@ -97,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/cuaca"
-            fab:fab_label="Check Weather"
+            fab:fab_label="@string/cek"
             fab:fab_size="mini"
             app:fab_colorRipple="@color/colorPrimary"/>
     </com.github.clans.fab.FloatingActionMenu>

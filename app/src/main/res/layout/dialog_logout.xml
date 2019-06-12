@@ -10,7 +10,7 @@
             android:id="@+id/TextView"
             android:textColor="@color/blue"
             android:textSize="30dp"
-            android:text="Are You Sure ?"
+            android:text="@string/are_you_sure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button

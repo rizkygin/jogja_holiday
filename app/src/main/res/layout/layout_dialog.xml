@@ -8,7 +8,7 @@
         android:id="@+id/edi_comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your Comment" />
+        android:hint="@string/your_comment" />
 
 
 </RelativeLayout>
